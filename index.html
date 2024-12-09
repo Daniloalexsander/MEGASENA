@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Jogos Mega-Sena</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Gerador de Jogos Mega-Sena</h1>
+            <p>Crie jogos aleatórios e adicione números já jogados.</p>
+        </header>
+
+        <section class="form-section">
+            <div>
+                <button id="gerarNumeros">Gerar Números Aleatórios</button>
+            </div>
+            <div>
+                <label for="jogoAdicionado">Adicionar Números Já Jogados:</label>
+                <input type="text" id="jogoAdicionado" placeholder="Digite 6 números separados por vírgula">
+                <button id="adicionarJogo">Adicionar Jogo</button>
+                <p id="adicionadosMsg"></p>
+            </div>
+            <div>
+                <label for="resultadoMega">Resultado Mega-Sena:</label>
+                <input type="text" id="resultadoMega" placeholder="Digite 6 números sorteados">
+                <button id="conferirResultado">Conferir</button>
+            </div>
+            <div>
+                <button id="baixarLista">Baixar Lista de Jogos</button>
+            </div>
+        </section>
+
+        <section class="stats">
+            <h2 id="jogosRestantes">Jogos restantes para cobrir todas as combinações: 50,063,860</h2>
+        </section>
+
+        <section class="numeros-gerados">
+            <h2>Números Gerados Aleatoriamente</h2>
+            <div id="numerosGerados"></div>
+        </section>
+
+        <section class="jogos-adicionados">
+            <h2>Jogos Adicionados</h2>
+            <ul id="jogosAdicionados"></ul>
+        </section>
+
+        <section id="resultadoConferido" class="resultado"></section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 24px;
+}
+
+p {
+    color: #7f8c8d;
+    font-size: 16px;
+}
+
+/* Form Section */
+.form-section {
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+label {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+#adicionadosMsg {
+    margin-top: 10px;
+}
+
+/* Stats Section */
+.stats {
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+    color: #e74c3c;
+}
+
+/* Numeros Gerados */
+.numeros-gerados, .jogos-adicionados {
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+/* Lista de Jogos */
+.number {
+    background-color: #ecf0f1;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.number span {
+    font-weight: bold;
+    color: #16a085;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Resultado */
+.resultado {
+    margin-top: 30px;
+}
+
+.resultado div {
+    background-color: #f39c12;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    color: white;
+}
+
+.resultado p {
+    margin: 5px 0;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    button, input {
+        width: 100%;
+    }
+}
