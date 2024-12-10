@@ -19,6 +19,22 @@ function gerarNumeros() {
   contadorJogos++; // Incrementa o contador
   atualizarNumerosGerados();
   calcularJogosRestantes();
+
+  baixarJSON();
+}
+
+function baixarJSON(){
+  const dados = {
+    numerosGerados,
+    jogosAdicionados
+  };
+
+  const textoJSON = JSON.stringify(dados, null, 2);
+  const blob = new Blob([textoJSON], { type: 'application/json' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'resultados-mega-sena.json';
+  link.click();
 }
 
 // Atualizar exibição dos números gerados
@@ -143,12 +159,16 @@ function conferirResultado() {
   }
 }
 
+document.getElementById('gerarNumeros').addEventListener('click', gerarNumeros);
+document.getElementById('adicionarJogo').addEventListener('click', adicionarJogo);
+document.getElementById('conferirResultado').addEventListener('click', conferirResultado);
+
 // Baixar lista de jogos
-document.getElementById('baixarLista').addEventListener('click', () => {
+/*document.getElementById('baixarLista').addEventListener('click', () => {
   const texto = `Números Gerados:\n${numerosGerados.map(jogo => `${jogo.id}: ${jogo.numeros.join(', ')}`).join('\n')}\n\nNúmeros Adicionados:\n${jogosAdicionados.map(jogo => `${jogo.id}: ${jogo.numeros.join(', ')}`).join('\n')}`;
   const blob = new Blob([texto], { type: 'text/plain' });
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
   link.download = 'numeros-mega-sena.txt';
-  link.click();
+  link.click();*/
 });
